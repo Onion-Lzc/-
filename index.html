@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        ------{{ name , age }}
+        <input type="text" value="age" @input="changeVal">
+        
+    </div>
+    <button onclick="aaa()"></button>
+    <script src="./index.js"></script>
+</body>
+<script>
+    let vm = new Vue({
+        el: 'app'
+    })
+    function aaa(){
+        vm.data = {
+            ...vm.data,
+            age:++vm.data.age
+        }
+    }
+    vm.data = {
+        name: 'sfdsf',
+        age: 135
+    }
+    // setInterval(()=>{
+    //     vm.data = {
+    //         ...vm.data,
+    //         age:++vm.data.age
+    //     }
+    // },1000)
+    var fn = alert
+    window.alert = () => {
+        fn('fuck')
+    }
+    alert(3)
+</script>
+
+</html>

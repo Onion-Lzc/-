@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/vue.js"></script>
+    <style>
+        li {
+            position: absolute;
+            list-style: none;
+            display: block;
+            height: 50px;
+            width: 200px;
+            background-color: red;
+            transition: all 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+
+        <ul class="">
+                <li v-for="(a,index) in arrs"
+                    :style="{ width: (arrs[arrMap[index]]/200)*100 + '%',top:((arrMap[index] * 55) )+ 'px',left:'0px'}">{{  arrs[arrMap[index]]/200*100 + '%' }}
+                </li>
+
+
+
+        </ul>
+        <div style="position: fixed;bottom:50px">{{ arrMap }}  | {{ arrs }}</div>
+    </div>
+    <script>
+        let vm = new Vue({
+            el: '#app',
+            data: {
+
+                arrs: [10,60,5,40,190,150,93,40,20,15,60,11,200,15],
+                arrMap: [0,1,2,3,4,5,6,7,8,9,10,11,12,13]
+            },
+            methods: {
+                async sleep() {
+                    return new Promise(res => {
+                        setTimeout(() => {
+                            res()
+                        }, 500);
+                    })
+                },
+
+                async sort() {
+                    for (let i = 0; i < this.arrs.length; i++) {
+                        for (let k = 0; k < this.arrs.length - i - 1; k++) {
+                            let a = this.arrs[k]
+                            let b = this.arrs[k + 1]
+                            let c = this.arrMap[k]
+                            let d = this.arrMap[k + 1]
+                            if (a > b) {
+                                this.arrs[k] = b
+                                this.arrs[k + 1] = a
+                                this.arrMap[k] = d
+                                this.arrMap[k + 1] = c
+                                await this.sleep()
+                                debugger
+                                this.$forceUpdate()
+                                // this.$set(this.arrs, k+1, this.arrs[k])
+                                // this.$set(this.arrs, k, this.arrs[k+1])
+
+                            }
+                        }
+                    }
+                }
+            },
+            mounted() {
+                this.sort()
+            }
+
+        })
+    </script>
+</body>
+
+</html>

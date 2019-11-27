@@ -1,0 +1,61 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\10993\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add @nutui/nutui
+
+PATH: 
+  D:\Program Files\Python37\Scripts\;D:\Program Files\Python37\;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\nodejs\;C:\Users\10993\AppData\Local\Microsoft\WindowsApps;;d:\Users\10993\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\10993\AppData\Roaming\npm
+
+Yarn version: 
+  1.19.1
+
+Node version: 
+  10.16.3
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile 'C:\Users\10993\AppData\Local\Yarn\Cache\v6\npm-inherits-2.0.1-b17d08d326b4423e568eff719f91b0b1cbdf69f1-integrity\node_modules\inherits\inherits.js' -> 'E:\user\桌面\开发学习\vue\vue-cms\node_modules\assert\node_modules\inherits\inherits.js'
+
+npm manifest: 
+  {
+    "name": "vue-cms",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "dev": "webpack-dev-server --config=./config/webpack.config.js",
+      "prod": "webpack --config=./config/webpack.config.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "babel-core": "^6.26.0",
+      "babel-loader": "^7.1.2",
+      "babel-plugin-transform-runtime": "^6.23.0",
+      "babel-preset-env": "^1.6.1",
+      "babel-preset-stage-0": "^6.24.1",
+      "file-loader": "^4.2.0",
+      "clean-webpack-plugin": "^3.0.0",
+      "css-loader": "^3.2.0",
+      "html-webpack-plugin": "^3.2.0",
+      "jquery": "^3.4.1",
+      "less": "^3.10.3",
+      "less-loader": "^5.0.0",
+      "style-loader": "^1.0.0",
+      "url-loader": "^2.2.0",
+      "vue": "^2.6.10",
+      "vue-loader": "^15.7.1",
+      "vue-router": "^3.1.3",
+      "vue-template-compiler": "^2.6.10",
+      "webpack": "^4.41.2",
+      "webpack-cli": "^3.3.9",
+      "webpack-dev-server": "^3.8.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
